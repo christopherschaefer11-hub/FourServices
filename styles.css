@@ -5,3 +5,47 @@
 @media(max-width:620px){.site-header{height:72px}.site-header nav{gap:17px}.site-header nav>a:not(.nav-cta){display:none}.wordmark{font-size:1.2rem}.wordmark-light{font-size:.6rem}.brand-mark{margin-right:2px}.hero{grid-template-columns:1fr;padding-top:38px}.hero h1{font-size:clamp(3.3rem,12vw,4.8rem)}.hero-art{margin-top:4px}.hero-art img{max-height:350px}.intro{font-size:.96rem}.hero-bottom{margin-top:16px;font-size:.55rem;letter-spacing:.06em}.art-caption{flex-direction:row;gap:20px}.section-heading{display:block}.section-heading>p{margin-top:20px}.section-heading h2 br{display:none}.service-choice{padding:18px 14px 40px;min-height:220px}.service-choice strong{font-size:1.13rem}.service-choice>span:not(.number):not(.choice-arrow){font-size:.72rem}.service-choice .number{margin-bottom:19px}.detail-columns{gap:15px}.principle{padding:54px 7%}.comparison{padding-bottom:50px}th,td{padding:16px 9px;font-size:.76rem}thead th{font-size:.58rem}.brief-section{grid-template-columns:1fr;gap:32px}.brief-options{grid-template-columns:1fr}.privacy{max-width:100%!important}footer{align-items:flex-start;flex-direction:column;gap:12px}.section{padding-top:50px;padding-bottom:50px}.detail-visual{min-height:240px}.visual-label{left:15px;font-size:.55rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{.site-header nav,.hero-art,.hero-bottom,.service-select,.brief-section,.text-link,.button{display:none}.hero{display:block;color:#122a30;background:white;padding:20px 0}.hero h1{font-size:36px}.hero h1 em,.intro,.hero .eyebrow{color:#122a30}.section{padding:20px 0}.service-detail,.service-detail[hidden]{display:block!important;break-inside:avoid;margin:30px 0}.detail-visual{display:none}.principle{background:white;padding:20px}.section-heading{margin-bottom:20px}h2{font-size:27px}h3{font-size:23px}footer{padding:20px 0}}
+
+/* Progressive enhancement: the readable guide is the default experience. */
+[hidden] { display: none; }
+.service-detail { scroll-margin-top: 24px; }
+textarea[aria-invalid="true"] { border-color: #9a3528; }
+.no-script-note { font-size: .85rem; }
+.source-link { font-size: .75rem; text-decoration: underline; text-underline-offset: 4px; }
+
+/* A concrete example, using the same four service identities. */
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 40px;
+  max-width: 1120px;
+  margin: 44px auto 0;
+  text-align: left;
+}
+.example-grid article { border-top: 1px solid #93ab60; padding: 28px 0; }
+.example-number { font-size: .67rem; letter-spacing: .13em; font-weight: 700; }
+.example-grid h3 { font-size: clamp(1.5rem, 2.3vw, 2rem); margin: 15px 0; letter-spacing: -.035em; }
+.example-grid p { font-size: .91rem; color: #334735; }
+.example-grid .example-output { font-size: .8rem; margin-top: 18px; }
+.example-output b { display: block; color: var(--ink); }
+.example-grid .text-link { font-size: .78rem; }
+.principle .example-footnote { font-size: .77rem; max-width: 700px; }
+@media (max-width: 620px) {
+  .example-grid { grid-template-columns: 1fr; margin-top: 30px; }
+  .example-grid article { padding: 24px 0; }
+  .example-grid h3 { font-size: 1.65rem; }
+}
+@media print {
+  .example-grid { margin-top: 20px; gap: 0 24px; }
+  .example-grid article { break-inside: avoid; padding: 18px 0; }
+  .example-grid h3 { font-size: 19px; }
+  .example-grid p { font-size: 10pt; }
+  .principle .example-footnote { font-size: 9pt; }
+  .source-link { display: none; }
+}
+
+/* The generated text stays available even if the browser blocks a download. */
+.brief-preview { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
+.brief-preview summary { cursor: pointer; font-size: .85rem; font-weight: 700; }
+.brief-preview pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 360px; overflow-y: auto; background: white; border: 1px solid var(--line); padding: 16px; font: .8rem/1.6 monospace; }
+summary:focus-visible, pre:focus-visible { outline: 3px solid #50772a; outline-offset: 5px; }
