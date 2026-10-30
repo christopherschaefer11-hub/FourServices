@@ -2,6 +2,8 @@
 
 **See. Model. Map. Verify.** Four reality capture services, explained through the decisions they support and the information they deliver.
 
+[View the live guide](https://christopherschaefer11-hub.github.io/FourServices/)
+
 This repository is a portable service guide for project managers, architects, survey teams, and facility owners. It includes a responsive landing page, reusable service definitions, illustrative examples, and a Markdown project brief. Start with the decision, then choose the capture and verification needed to support it.
 
 The services can be combined. Their numbers are navigation labels, not an accuracy ranking or a requirement to buy a sequence of packages. This is a concept framework with generic branding, no pricing, and no claim of organizational approval.
